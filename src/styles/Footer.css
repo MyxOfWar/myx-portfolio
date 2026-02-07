@@ -2,28 +2,39 @@
 
 .footer {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
   "navigation"
   "copyright";
   background: var(--bg-secondary);
   border: 2px solid var(--color-border);
   border-radius: 8px;
   padding: 1rem;
-  margin-top: 2rem;
-  max-width: 90vw;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 1280px;
+  z-index: 10;
 }
 
 .navigation {
   grid-area: navigation;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
 }
 
 .navigation a {
   color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
+}
+
+.navigation a.active {
+  color: var(--color-accent);
 }
 
 .navigation a:hover {
