@@ -1,0 +1,51 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+    /* Background */
+  --bg-primary: #0C0020; /* midnight violet - perfect match */
+  --bg-secondary: #1a0f2e; /* slightly lighter for cards/panels */
+  
+  /* Text */
+  --text-primary: #e4dff7; /* light lavender for main text/HTML tags */
+  --text-secondary: #9d8fb8; /* muted purple for comments */
+  --text-dim: #6b5b7a; /* even more muted for line numbers */
+  
+  /* Syntax highlighting colors (matching the screenshot) */
+  --color-keyword: #C468FF; /* your mauve - for const, if, return */
+  --color-function: #58DBE4; /* your cyan - for function names */
+  --color-string: #f0c674; /* golden/amber for strings */
+  --color-component: #FF57F7; /* your peony - for JSX components */
+  --color-property: #B88AFF; /* your lavender - for properties */
+  --color-operator: #e4dff7; /* light for =, =>, () */
+  
+  /* UI Elements */
+  --color-accent: #FF57F7; /* peony for cursor, highlights */
+  --color-border: #2d1f3d; /* subtle purple for borders */
+  --color-hover: #251638; /* for hover states */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--color-accent);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}

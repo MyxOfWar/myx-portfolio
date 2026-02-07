@@ -1,0 +1,17 @@
+@import './index.css';
+
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.app {
+  height: 80vh;
+  width: 90vw;
+  display: grid;
+  place-items: center;
+  justify-content: center;
+}

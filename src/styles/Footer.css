@@ -1,0 +1,39 @@
+@import './index.css';
+
+.footer {
+  display: grid;
+  grid-template-areas: 
+  "navigation"
+  "copyright";
+  background: var(--bg-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 2rem;
+  max-width: 90vw;
+}
+
+.navigation {
+  grid-area: navigation;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navigation a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navigation a:hover {
+  color: var(--color-accent);
+} 
+
+.copyright {
+  grid-area: copyright;
+  text-align: center;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+

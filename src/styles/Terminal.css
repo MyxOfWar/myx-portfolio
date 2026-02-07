@@ -1,0 +1,79 @@
+@import './index.css';
+
+.terminal {
+  width: 90%;
+  height: 400px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  display: grid;
+  grid-template-areas: 
+  "header header"
+  "line-numbers content"
+  "spacer input";
+  align-self: center;
+}
+
+div.header {
+  grid-area: header;
+  background: var(--bg-tertiary);
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--color-border);
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+div.line-numbers {
+  grid-area: line-numbers;
+  background: var(--bg-secondary);
+  padding: 2px;
+  padding-right: 1rem;
+  border-right: 2px solid var(--color-border);
+  color: var(--text-dim);
+  text-align: right;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+}
+
+div.content {
+  grid-area: content;
+  background: var(--bg-secondary);
+  padding-left: 5px;
+  padding-right: 5px;
+  color: var(--text-primary);
+  overflow-y: auto;
+  font-family: 'Source Code Pro', monospace;
+  text-align: left;
+}
+
+div.spacer {
+  grid-area: spacer;
+}
+
+div.input {
+  grid-area: input;
+  background: var(--bg-secondary);
+  padding: 0.5rem;
+  border-top: 2px solid var(--color-border);
+  color: var(--text-primary);
+  font-family: 'Source Code Pro', monospace;
+  display: flex;
+  align-items: center;
+}
+
+div.input span.prompt {
+  margin-right: 0.5rem;
+}
+
+div.input input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: 'Source Code Pro', monospace;
+}
+
+div.input input:focus {
+  outline: none;
+} 
