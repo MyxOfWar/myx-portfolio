@@ -15,7 +15,7 @@ const skillsData = [
   { id: 14, command: '- MongoDB' },
   { id: 15, command: '- Database Design' },
   { id: 16, command: '- RESTful API Patterns' },
-  { id: 17, command: '- basic SQL' },
+  { id: 17, command: '- Basic SQL' },
   { id: 18, command: '-----------------------------------' },
   { id: 19, command: 'Accessibility & UX:' },
   { id: 20, command: '- Accessibility Reviews' },

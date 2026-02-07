@@ -44,9 +44,6 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
   background: var(--bg-primary);
   color: var(--text-primary);
 }

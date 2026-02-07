@@ -21,7 +21,6 @@ p{
 
 }
 
-
 div.header {
   height: 30px;
   padding: 0.5rem;
@@ -52,12 +51,27 @@ div.header span p.window-controls.close {
   background: #ff5f56;
 }
 
+div.header span p.window-controls.close:hover {
+  background: #ff5f56;
+  box-shadow: 0 0 5px #ff5f56;
+} 
+
 div.header span p.window-controls.minimize {
   background: #ffbd2e;
 }
 
+div.header span p.window-controls.minimize:hover {
+  background: #ffbd2e;
+  box-shadow: 0 0 5px #ffbd2e;
+} 
+
 div.header span p.window-controls.maximize {
   background: #27c93f;
+}
+
+div.header span p.window-controls.maximize:hover {
+  background: #27c93f;
+  box-shadow: 0 0 5px #27c93f;
 }
 
 div.content {
