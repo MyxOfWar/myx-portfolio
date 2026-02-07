@@ -9,12 +9,12 @@ function Outlet() {
 
   return (
     <div className="content">
-        {homeData.map(item => (
-          <p key={item.id}>
-            <span className="prompt">$</span> {item.command}
-          </p>
-        ))}
-      </div>
+      {homeData.map(item => (
+        <p key={item.id}>
+          <span className="prompt">$</span> {item.command}
+        </p>
+      ))}
+    </div>
   )
 }
 
