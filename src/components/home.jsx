@@ -1,3 +1,5 @@
+import TerminalLine from './TerminalLine';
+
 const homeData = [
   { id: 1, command: 'Welcome to my terminal portfolio!' },
   { id: 2, command: 'Here, you can explore my projects and skills.' },
@@ -8,12 +10,12 @@ const homeData = [
 ]
 
 function Home() {
-  
+
   return (
     <div className="content">
       {homeData.map(item => (
         <p key={item.id}>
-          <span className="prompt">$</span> {item.command}
+          <span className="prompt">$</span> <TerminalLine text={item.command} />
         </p>
       ))}
     </div>

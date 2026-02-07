@@ -2,7 +2,9 @@
 function Contact () {
 
   return (
-    <div>Contact</div>
+    <div className="content">
+      <p><span className="prompt">$</span> Contact coming soon...</p>
+    </div>
   )
 }
 

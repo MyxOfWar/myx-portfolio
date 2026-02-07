@@ -1,5 +1,3 @@
-@import './index.css';
-
 .terminal {
   width: 90vw;
   height: 400px;
@@ -15,19 +13,21 @@
   border-radius: 8px;
 }
 
-p{
+p {
   margin: 0;
   padding: 0;
-
 }
 
+/* ── Header (title bar) ───────────────────── */
 div.header {
   height: 30px;
   padding: 0.5rem;
   grid-area: header;
   border-bottom: 2px solid var(--color-border);
   background: var(--bg-tertiary);
-  color: var(--color-string);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
   text-align: left;
   display: flex;
   justify-content: space-between;
@@ -50,45 +50,51 @@ div.header span p.window-controls {
 div.header span p.window-controls.close {
   background: #ff5f56;
 }
-
 div.header span p.window-controls.close:hover {
   background: #ff5f56;
   box-shadow: 0 0 5px #ff5f56;
-} 
+}
 
 div.header span p.window-controls.minimize {
   background: #ffbd2e;
 }
-
 div.header span p.window-controls.minimize:hover {
   background: #ffbd2e;
   box-shadow: 0 0 5px #ffbd2e;
-} 
+}
 
 div.header span p.window-controls.maximize {
   background: #27c93f;
 }
-
 div.header span p.window-controls.maximize:hover {
   background: #27c93f;
   box-shadow: 0 0 5px #27c93f;
 }
 
+/* ── Content area ─────────────────────────── */
 div.content {
   width: 98%;
   grid-area: content;
   background: var(--bg-secondary);
-  padding: 0px 5px 0px 5px;
+  padding: 0px 5px;
   color: var(--text-primary);
   overflow-y: auto;
-  font-family: 'Source Code Pro', monospace;
+  font-family: var(--font-mono);
   text-align: left;
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 }
 
+/* ── Prompt symbol ($) ────────────────────── */
+.prompt {
+  color: var(--color-function);
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* ── Input bar ────────────────────────────── */
 div.input {
   height: 40px;
   grid-area: input;
@@ -96,14 +102,10 @@ div.input {
   padding: 0.5rem;
   border-top: 2px solid var(--color-border);
   color: var(--text-primary);
-  font-family: 'Source Code Pro', monospace;
+  font-family: var(--font-mono);
   display: flex;
   align-items: center;
   align-self: end;
-}
-
-div.input span.prompt {
-  margin-right: 0.5rem;
 }
 
 div.input input {
@@ -111,9 +113,55 @@ div.input input {
   background: transparent;
   border: none;
   color: var(--text-primary);
-  font-family: 'Source Code Pro', monospace;
+  font-family: var(--font-mono);
+  font-size: inherit;
 }
 
 div.input input:focus {
   outline: none;
-} 
+}
+
+div.input input::placeholder {
+  color: var(--text-dim);
+}
+
+/* ── Syntax Highlighting (TerminalLine) ────── */
+.syn-command {
+  color: var(--color-keyword);
+  font-weight: 600;
+}
+
+.syn-keyword {
+  color: var(--color-keyword);
+  font-weight: 600;
+}
+
+.syn-func-name {
+  color: var(--color-function);
+}
+
+.syn-string {
+  color: var(--color-string);
+}
+
+.syn-flag {
+  color: var(--color-property);
+}
+
+.syn-bracket {
+  color: var(--color-property);
+}
+
+.syn-header {
+  color: var(--color-component);
+  font-weight: 600;
+}
+
+.syn-separator {
+  color: var(--text-dim);
+}
+
+.syn-bullet {
+  color: var(--color-function);
+  font-weight: 600;
+}

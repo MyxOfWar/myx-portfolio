@@ -1,36 +1,55 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* ── Fonts ─────────────────────────────── */
+  --font-sans: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-mono: 'Source Code Pro', 'Fira Code', 'Consolas', monospace;
+
+  /* ── Backgrounds ───────────────────────── */
+  --bg-primary: #0C0020;   /* midnight violet */
+  --bg-secondary: #1a0f2e; /* cards / panels */
+  --bg-tertiary: #130a24;  /* subtler layer (terminal header) */
+
+  /* ── Text ──────────────────────────────── */
+  --text-primary: #e4dff7;   /* light lavender */
+  --text-secondary: #9d8fb8; /* muted purple */
+  --text-dim: #6b5b7a;       /* line numbers, timestamps */
+
+  /* ── Syntax Colors ─────────────────────── */
+  --color-keyword: #C468FF;  /* mauve — const, if, return */
+  --color-function: #58DBE4; /* cyan — function names */
+  --color-string: #f0c674;   /* golden — strings */
+  --color-component: #FF57F7;/* peony — JSX components */
+  --color-property: #B88AFF; /* lavender — properties */
+  --color-operator: #e4dff7; /* light — =, =>, () */
+
+  /* ── UI Elements ───────────────────────── */
+  --color-accent: #FF57F7;   /* peony — cursor, highlights */
+  --color-border: #2d1f3d;   /* subtle purple borders */
+  --color-hover: #251638;    /* hover states */
+
+  /* ── Base Typography ───────────────────── */
+  font-family: var(--font-sans);
   line-height: 1.5;
   font-weight: 400;
-
-    /* Background */
-  --bg-primary: #0C0020; /* midnight violet - perfect match */
-  --bg-secondary: #1a0f2e; /* slightly lighter for cards/panels */
-  
-  /* Text */
-  --text-primary: #e4dff7; /* light lavender for main text/HTML tags */
-  --text-secondary: #9d8fb8; /* muted purple for comments */
-  --text-dim: #6b5b7a; /* even more muted for line numbers */
-  
-  /* Syntax highlighting colors (matching the screenshot) */
-  --color-keyword: #C468FF; /* your mauve - for const, if, return */
-  --color-function: #58DBE4; /* your cyan - for function names */
-  --color-string: #f0c674; /* golden/amber for strings */
-  --color-component: #FF57F7; /* your peony - for JSX components */
-  --color-property: #B88AFF; /* your lavender - for properties */
-  --color-operator: #e4dff7; /* light for =, =>, () */
-  
-  /* UI Elements */
-  --color-accent: #FF57F7; /* peony for cursor, highlights */
-  --color-border: #2d1f3d; /* subtle purple for borders */
-  --color-hover: #251638; /* for hover states */
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ── Global Resets ─────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ── Links ─────────────────────────────────── */
 a {
   font-weight: 500;
   color: var(--text-secondary);
@@ -40,10 +59,24 @@ a:hover {
   color: var(--color-accent);
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  background: var(--bg-primary);
-  color: var(--text-primary);
+/* ── Selection ─────────────────────────────── */
+::selection {
+  background: var(--color-accent);
+  color: var(--bg-primary);
+}
+
+/* ── Scrollbar (webkit) ────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dim);
 }

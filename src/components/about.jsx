@@ -1,10 +1,12 @@
+import TerminalLine from './TerminalLine';
+
 const aboutData = [
   {
     id: 1,
-    command: 'echo "About Me"',
+    command: "echo 'About Me'",
   },
   {
-    id: 2, 
+    id: 2,
     command: 'My name is Myx Peace.',
   },
   {
@@ -21,7 +23,7 @@ const aboutData = [
   },
   {
     id: 6,
-    command: 'I love creating interactive and user-friendly applications.',
+    command: 'I love creating fun, interactive, and user friendly applications.',
   },
   {
     id: 7,
@@ -35,7 +37,7 @@ function About() {
     <div className="content">
       {aboutData.map(item => (
         <p key={item.id}>
-          <span className="prompt">$</span> {item.command}
+          <span className="prompt">$</span> <TerminalLine text={item.command} />
         </p>
       ))}
     </div>

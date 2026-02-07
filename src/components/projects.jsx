@@ -2,7 +2,9 @@
 function Projects() {
 
   return (
-    <div>Projects</div>
+    <div className="content">
+      <p><span className="prompt">$</span> Projects coming soon...</p>
+    </div>
   )
 }
 
