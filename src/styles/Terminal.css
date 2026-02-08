@@ -1,4 +1,5 @@
 .terminal {
+  position: relative;
   width: 90vw;
   height: 400px;
   display: grid;
@@ -11,6 +12,24 @@
   background: var(--bg-secondary);
   border: 2px solid var(--color-border);
   border-radius: 8px;
+  transition: height 0.3s ease;
+}
+
+/* ── Window mode: maximized ──────────────── */
+.terminal.maximized {
+  height: 800px;
+}
+
+/* ── Window mode: minimized ──────────────── */
+.terminal.minimized {
+  height: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "header";
+}
+
+.terminal.minimized div.content,
+.terminal.minimized div.input {
+  display: none;
 }
 
 p {
@@ -164,4 +183,39 @@ div.input input::placeholder {
 .syn-bullet {
   color: var(--color-function);
   font-weight: 600;
+}
+
+/* ── Command entries ─────────────────────── */
+.command-entry {
+  margin-top: 0.5rem;
+  color: var(--color-function);
+}
+
+.output-entry {
+  color: var(--text-primary);
+  padding-left: 1.25rem;
+}
+
+/* ── Typing cursor ───────────────────────── */
+.typing-cursor {
+  color: var(--color-accent);
+  font-weight: 600;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── Matrix / Hack canvas overlay ────────── */
+.matrix-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 8px;
+  pointer-events: none;
 }

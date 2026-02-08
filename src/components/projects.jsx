@@ -1,5 +1,4 @@
-
-import TerminalLine from "./TerminalLine";
+import PageContent from './PageContent';
 
 const projectsData = [
   {
@@ -19,8 +18,8 @@ const projectsData = [
   },
   {
     id: 2.1,
-    command: 'Personal Portfolio Website - A responsive portfolio website built with React and hosted on GitHub Pages.' 
-    
+    command: 'Personal Portfolio Website - A responsive portfolio website built with React and hosted on GitHub Pages.'
+
   },
   {
     id: 2.2,
@@ -68,16 +67,7 @@ const projectsData = [
 ]
 
 function Projects() {
-
-  return (
-    <div className="content">
-      {projectsData.map(item => (
-        <p key={item.id}>
-          <span className="prompt">$</span> <TerminalLine text={item.command} />
-        </p>
-      ))}
-    </div>
-  )
+  return <PageContent data={projectsData} />;
 }
 
 export default Projects;

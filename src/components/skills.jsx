@@ -1,4 +1,4 @@
-import TerminalLine from './TerminalLine';
+import PageContent from './PageContent';
 
 const skillsData = [
   { id: 1, command: 'npm run SkillsOverview' },
@@ -23,7 +23,7 @@ const skillsData = [
   { id: 20, command: '- Basic SQL )' },
   { id: 21, command: '}' },
   { id: 22, command: ' ' },
-  { id: 23, command: 'function AccessibilityAndUX () {' }, 
+  { id: 23, command: 'function AccessibilityAndUX () {' },
   { id: 24, command: 'return (' },
   { id: 25, command: '- Accessibility Reviews' },
   { id: 26, command: '- WCAG Compliance' },
@@ -47,16 +47,7 @@ const skillsData = [
 ];
 
 function Skills() {
-
-  return (
-    <div className="content">
-      {skillsData.map(item => (
-        <p key={item.id}>
-          <span className="prompt">$</span> <TerminalLine text={item.command} />
-        </p>
-      ))}
-    </div>
-  )
+  return <PageContent data={skillsData} />;
 }
 
 export default Skills;

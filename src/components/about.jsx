@@ -1,4 +1,4 @@
-import TerminalLine from './TerminalLine';
+import PageContent from './PageContent';
 
 const aboutData = [
   {
@@ -31,17 +31,9 @@ const aboutData = [
   },
   { id: 8, command: 'Feel free to explore my projects and skills!' },
 ]
-function About() {
 
-  return (
-    <div className="content">
-      {aboutData.map(item => (
-        <p key={item.id}>
-          <span className="prompt">$</span> <TerminalLine text={item.command} />
-        </p>
-      ))}
-    </div>
-  )
+function About() {
+  return <PageContent data={aboutData} />;
 }
 
 export default About;

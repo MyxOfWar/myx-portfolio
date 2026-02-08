@@ -1,4 +1,4 @@
-import TerminalLine from "./TerminalLine";
+import PageContent from './PageContent';
 
 const contactData = [
   {
@@ -11,11 +11,11 @@ const contactData = [
   },
   {
     id: 3,
-    command: 'LinkedIn: linkedin.com/in/myx-peace',
+    command: "LinkedIn: 'linkedin.com/in/myxpeace'",
   },
   {
     id: 4,
-    command: 'GitHub: github.com/myxpeace',
+    command: "GitHub: 'github.com/MyxOfWar'",
   },
   {
     id: 5,
@@ -24,16 +24,7 @@ const contactData = [
 ]
 
 function Contact () {
-
-  return (
-    <div className="content">
-      {contactData.map(item => (
-        <p key={item.id}>
-          <span className="prompt">$</span> <TerminalLine text={item.command} />
-        </p>
-      ))}
-    </div>
-  )
+  return <PageContent data={contactData} />;
 }
 
 export default Contact;

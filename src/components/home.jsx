@@ -1,4 +1,4 @@
-import TerminalLine from './TerminalLine';
+import PageContent from './PageContent';
 
 const homeData = [
   { id: 1, command: 'Welcome to my terminal portfolio!' },
@@ -10,16 +10,7 @@ const homeData = [
 ]
 
 function Home() {
-
-  return (
-    <div className="content">
-      {homeData.map(item => (
-        <p key={item.id}>
-          <span className="prompt">$</span> <TerminalLine text={item.command} />
-        </p>
-      ))}
-    </div>
-  )
+  return <PageContent data={homeData} />;
 }
 
 export default Home;
